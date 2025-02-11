@@ -8,6 +8,7 @@ public class Food {
      * Constructor - Spawns the food at a random location when the game starts.
      * @param player The snake object to ensure food does not spawn on the snake.
      */
+
     public Food(Snake player) {
         this.random_spawn(player);
     }
@@ -16,6 +17,7 @@ public class Food {
      * Randomly spawns food on the grid, ensuring it does not appear on the snake's body.
      * @param player The snake object to check food positioning.
      */
+
     public void random_spawn(Snake player) {
         boolean onSnake = true; // Flag to check if food spawns on the snake
 

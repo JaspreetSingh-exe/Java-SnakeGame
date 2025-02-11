@@ -43,6 +43,7 @@ public class Snake {
      * The movement is performed by adding a new head segment in the movement direction
      * and removing the last segment to maintain the snake's length.
      */
+
     public void move() {
         if (!move.equals("NOTHING")) { // Ensure the snake moves only if a direction is set
             Rectangle first = body.get(0); // Get the current head position
@@ -70,6 +71,7 @@ public class Snake {
     /**
      * Grows the snake by adding a new head segment in the current movement direction.
      */
+
     public void grow() {
         Rectangle first = body.get(0); // Get the current head position
 
@@ -93,6 +95,7 @@ public class Snake {
     /**
      * Returns the snake's body.
      */
+
     public ArrayList<Rectangle> getBody() {
         return body;
     }
@@ -100,6 +103,7 @@ public class Snake {
     /**
      * Sets the snake's body.
      */
+
     public void setBody(ArrayList<Rectangle> body) {
         this.body = body;
     }
@@ -107,6 +111,7 @@ public class Snake {
     /**
      * Gets the X-coordinate of the snake's head.
      */
+
     public int getX() {
         return body.get(0).x;
     }
@@ -114,6 +119,7 @@ public class Snake {
     /**
      * Gets the Y-coordinate of the snake's head.
      */
+
     public int getY() {
         return body.get(0).y;
     }
@@ -121,6 +127,7 @@ public class Snake {
     /**
      * Gets the current movement direction of the snake.
      */
+
     public String getMove() {
         return move;
     }

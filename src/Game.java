@@ -19,6 +19,7 @@ public class Game implements KeyListener {
     /**
      * Constructor - Initializes the game window, snake, food, and graphics.
      */
+
     public Game() {
         window = new JFrame(); // Create the game window
 
@@ -38,6 +39,7 @@ public class Game implements KeyListener {
     /**
      * Starts the game by setting the game state to "RUNNING".
      */
+
     public void start() {
         graphics.state = "RUNNING";
     }
@@ -45,6 +47,7 @@ public class Game implements KeyListener {
     /**
      * Updates the game logic (snake movement, collisions, food consumption).
      */
+
     public void update() {
         if (graphics.state.equals("RUNNING")) { // Ensure the game is in running state
             if (check_food_collision()) {
@@ -64,6 +67,7 @@ public class Game implements KeyListener {
      * Checks if the snake collides with the walls.
      * @return true if collision occurs, false otherwise.
      */
+
     private boolean check_wall_collision() {
         return (player.getX() < 0 || player.getX() >= width * dimension
                 || player.getY() < 0 || player.getY() >= height * dimension);
@@ -73,6 +77,7 @@ public class Game implements KeyListener {
      * Checks if the snake's head collides with the food.
      * @return true if food is eaten, false otherwise.
      */
+
     private boolean check_food_collision() {
         return (player.getX() == food.getX() * dimension && player.getY() == food.getY() * dimension);
     }
@@ -81,6 +86,7 @@ public class Game implements KeyListener {
      * Checks if the snake collides with itself.
      * @return true if the snake bites itself, false otherwise.
      */
+
     private boolean check_self_collision() {
         for (int i = 1; i < player.getBody().size(); i++) {
             if (player.getX() == player.getBody().get(i).x &&
@@ -97,6 +103,7 @@ public class Game implements KeyListener {
     /**
      * Handles keyboard input for controlling the snake's direction.
      */
+
     @Override
     public void keyPressed(KeyEvent e) {
         int keyCode = e.getKeyCode(); // Get the pressed key

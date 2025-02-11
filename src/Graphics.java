@@ -18,6 +18,7 @@ public class Graphics extends JPanel implements ActionListener {
      * Constructor - Initializes the game graphics, starts the timer, and sets up key listeners.
      * @param g The game instance.
      */
+
     public Graphics(Game g) {
         t.start();
         state = "START"; // Initial state before the game starts
@@ -36,6 +37,7 @@ public class Graphics extends JPanel implements ActionListener {
      * Renders the game elements on the screen based on the game state.
      * @param g The graphics object used for drawing.
      */
+
     @Override
     public void paintComponent(java.awt.Graphics g) {
         super.paintComponent(g);
@@ -89,6 +91,7 @@ public class Graphics extends JPanel implements ActionListener {
      * Triggers repainting and game updates at each timer tick.
      * @param e The action event triggered by the timer.
      */
+
     @Override
     public void actionPerformed(ActionEvent e) {
         repaint(); // Refresh the screen
